@@ -24,6 +24,11 @@
 
 ASTRA_BEGIN_DECLS
 
+/**
+ * \defgroup body_ref body stream apis
+ * \ingroup c_ref
+ * @{
+ */
 ASTRA_API_EX astra_status_t astra_reader_get_bodystream(astra_reader_t reader,
                                                         astra_bodystream_t* bodyStream);
 
@@ -101,9 +106,19 @@ ASTRA_API_EX astra_status_t astra_bodyframe_floor_info_ptr(astra_bodyframe_t bod
 ASTRA_API_EX astra_status_t astra_bodyframe_body_list(astra_bodyframe_t bodyFrame,
                                                       astra_body_list_t* bodyList);
 
+/**
+ * rotate body frame
+ * @param angle the angle of clockwise direction rotation, can be 90 and 270.
+ */
 ASTRA_API_EX astra_status_t astra_bodyframe_rotate(astra_bodyframe_t bodyFrame, int angle);
 
+/**
+ * set license to use sdk after trial.
+ * @param licenseString the licenseString.
+ * @return ASTRA_STATUS_SUCCESS if license is valid.
+ */
 ASTRA_API_EX astra_status_t orbbec_body_tracking_set_license(const char* licenseString);
+/** @} */
 
 ASTRA_END_DECLS
 

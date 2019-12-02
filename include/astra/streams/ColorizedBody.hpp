@@ -24,6 +24,12 @@
 
 namespace astra {
 
+    /*!
+      \ingroup cpp_ref
+      \brief A Colorized Body Stream
+
+      \details A Colorized Body Stream
+     */
     class ColorizedBodyStream : public DataStream
     {
     public:
@@ -42,6 +48,12 @@ namespace astra {
 		astra_colorizedbodystream_t colorizedbodyStream_;
     };
 
+    /*!
+      \ingroup cpp_ref
+      \brief A Colorized Body Frame
+
+      \details A Colorized Body Frame
+     */
     class ColorizedBodyFrame : public ImageFrame<RgbaPixel, ASTRA_STREAM_COLORIZED_BODY>
     {
     public:

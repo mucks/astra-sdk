@@ -24,6 +24,12 @@
 
 namespace astra {
 
+    /*!
+      \ingroup cpp_ref
+      \brief A color stream
+
+      \details A color stream.
+     */
     class ColorStream : public ImageStream
     {
     public:
@@ -40,6 +46,12 @@ namespace astra {
         astra_colorstream_t colorStream_;
     };
 
+    /*!
+      \ingroup cpp_ref
+      \brief color frame of rgb format
+
+      \details color frame of rgb format
+     */
     class ColorFrame : public ImageFrame<RgbPixel, ASTRA_STREAM_COLOR>
     {
     public:
@@ -48,6 +60,12 @@ namespace astra {
         {}
     };
 
+    /*!
+      \ingroup cpp_ref
+      \brief color frame of raw format
+
+      \details color frame of raw format
+     */
     class RawColorFrame : public ImageFrame<uint8_t, ASTRA_STREAM_COLOR>
     {
     public:

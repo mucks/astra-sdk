@@ -22,6 +22,10 @@
 
 namespace astra {
 
+    /*! 
+    \ingroup cpp_ref
+    \brief Represents a float 3d vector 
+    */
     struct Vector3f : public astra_vector3f_t
     {
         Vector3f()

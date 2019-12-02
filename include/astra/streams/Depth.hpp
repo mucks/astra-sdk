@@ -25,24 +25,45 @@
 
 namespace astra {
 
+    /*!
+      \ingroup cpp_ref
+      \brief CoordinateMapper
+
+      \details Can convert coordinate system of point.
+     */
     class CoordinateMapper
     {
     public:
+        /*! 
+        \brief Constructs
+        */
         CoordinateMapper(astra_depthstream_t depthStream)
             : depthStream_(depthStream)
         { }
 
+        /*! 
+        \brief copy Constructs
+        */
         CoordinateMapper(const CoordinateMapper& rhs)
         {
             this->depthStream_ = rhs.depthStream_;
         }
 
+        /*! 
+        \brief copy Constructs
+        */
         CoordinateMapper operator=(const CoordinateMapper& rhs)
         {
             this->depthStream_ = rhs.depthStream_;
             return *this;
         }
 
+        /*!
+          \brief convert depth coor to world coor
+
+          \param[in] dpeth position
+          \return world position          
+        */
         astra::Vector3f convert_depth_to_world(astra::Vector3f depthPosition) const
         {
             float worldX, worldY, worldZ;
@@ -55,6 +76,12 @@ namespace astra {
             return Vector3f(worldX, worldY, worldZ);
         }
 
+        /*!
+          \brief convert depth coor to world coor
+
+          \param[in] world position
+          \return dpeth position
+        */
         Vector3f convert_world_to_depth(Vector3f worldPosition) const
         {
             float depthX, depthY, depthZ;
@@ -67,6 +94,16 @@ namespace astra {
             return Vector3f(depthX, depthY, depthZ);
         }
 
+        /*!
+          \brief convert depth coor to world coor
+
+          \param[in] depth x
+          \param[in] depth y
+          \param[in] depth z
+          \param[out] world x
+          \param[out] world y
+          \param[out] world z
+         */
         void convert_depth_to_world(float  depthX, float  depthY, float  depthZ,
                                     float& worldX, float& worldY, float& worldZ) const
         {
@@ -74,6 +111,16 @@ namespace astra {
                                          &worldX, &worldY, &worldZ);
         }
 
+         /*!
+          \brief convert world coor to depth coor
+
+          \param[in] world x
+          \param[in] world y
+          \param[in] world z
+          \param[out] depth x
+          \param[out] depth y
+          \param[out] depth z
+         */
         void convert_world_to_depth(float  worldX, float  worldY, float  worldZ,
                                     float& depthX, float& depthY, float& depthZ) const
         {
@@ -86,6 +133,12 @@ namespace astra {
         astra_depthstream_t depthStream_;
     };
 
+    /*!
+      \ingroup cpp_ref
+      \brief A Depth Stream
+
+      \details Depth Stream is a stream form depth sensor device.
+     */
     class DepthStream : public ImageStream
     {
     public:
@@ -97,6 +150,11 @@ namespace astra {
 
         static const astra_stream_type_t id = ASTRA_STREAM_DEPTH;
 
+        /*!
+          \brief get world conversion
+
+          \return world conversion          
+         */
         astra_conversion_cache_t depth_to_world_data() const
         {
             astra_conversion_cache_t data;
@@ -105,6 +163,11 @@ namespace astra {
             return data;
         }
 
+        /*!
+          \brief return is registration enabled
+
+          \return registration enabled
+         */
         bool registration_enabled() const
         {
             bool enabled = false;
@@ -113,15 +176,31 @@ namespace astra {
             return enabled;
         }
 
+        /*!
+          \brief enable registration
+
+          \param[in] enable
+         */
         void enable_registration(bool enable)
         {
             astra_depthstream_set_registration(depthStream_, enable);
         }
+
+        /*!
+          \brief set depth to color resolution if device supports.
+
+          \param[in] mode refer to device.
+         */
         void set_d2c_resolution(int mode)
         {
             astra_depthstream_set_d2c_resolution(depthStream_, mode);
         }
 
+        /*!
+          \brief get depth to color resolution if device supports.
+
+          \return mode refer to device.
+         */
         int get_d2c_resolution()
         {
             int mode = 0;
@@ -129,11 +208,22 @@ namespace astra {
             return mode;
         }
 
+        /*!
+          \brief get serial number
+
+          \param[in/out] serial number data buffer
+          \param[in] length of serial number
+         */
         void serial_number(char* serialnumber, uint32_t length) const
         {
             astra_depthstream_get_serialnumber(depthStream_, serialnumber, length);
         }
 
+        /*!
+          \brief get serial number
+
+          \return serial number
+         */
         std::string serial_number() const
         {
             char serialNumber[ASTRA_SERIAL_NUMBER_MAX];
@@ -141,6 +231,11 @@ namespace astra {
             return std::string(serialNumber);
         }
 
+        /*!
+          \brief get chip id
+
+          \return chip id
+         */
         std::uint32_t chip_id() const
         {
             uint32_t chip_id;
@@ -148,6 +243,11 @@ namespace astra {
             return chip_id;
         }
 
+        /*!
+          \brief get Coordinate Mapper
+
+          \return Coordinate Mapper
+         */
         const CoordinateMapper& coordinateMapper() const { return coordinateMapper_; };
 
     private:
@@ -155,6 +255,13 @@ namespace astra {
         CoordinateMapper coordinateMapper_;
     };
 
+    
+    /*!
+      \ingroup cpp_ref
+      \brief A Depth Frame
+
+      \details Depth Frame of short format, 1 mm per value;
+     */
     class DepthFrame : public ImageFrame<int16_t, ASTRA_STREAM_DEPTH>
     {
     public:

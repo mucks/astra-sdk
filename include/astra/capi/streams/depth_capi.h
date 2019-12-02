@@ -26,6 +26,11 @@
 
 ASTRA_BEGIN_DECLS
 
+/**
+ * \defgroup depth_ref depth stream apis
+ * \ingroup c_ref
+ * @{
+ */
 ASTRA_API_EX astra_status_t astra_convert_depth_to_world(astra_depthstream_t depthStream,
                                                          float depthX, float depthY, float depthZ,
                                                          float* pWorldX, float* pWorldY, float* pWorldZ);
@@ -55,9 +60,17 @@ ASTRA_API_EX astra_status_t astra_depthstream_get_registration(astra_depthstream
 ASTRA_API_EX astra_status_t astra_depthstream_set_registration(astra_depthstream_t depthStream,
                                                                bool enabled);
 
+/**
+ * get depth to color resolution if device supports.
+ * @param mode refer to device.
+ */
 ASTRA_API_EX astra_status_t astra_depthstream_get_d2c_resolution(astra_depthstream_t depthStream,
                                                               int *mode);
 
+/**
+ * set depth to color resolution if device supports.
+ * @param mode refer to device.
+ */
 ASTRA_API_EX astra_status_t astra_depthstream_set_d2c_resolution(astra_depthstream_t depthStream,
                                                               int mode);
                                                                
@@ -94,6 +107,7 @@ ASTRA_API_EX astra_status_t astra_depthframe_get_metadata(astra_depthframe_t dep
 ASTRA_API_EX astra_status_t astra_depthframe_get_frameindex(astra_depthframe_t depthFrame,
                                                             astra_frame_index_t* index);
 
+/** @} */
 ASTRA_END_DECLS
 
 #endif // DEPTH_CAPI_H

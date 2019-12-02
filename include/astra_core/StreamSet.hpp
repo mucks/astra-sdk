@@ -26,6 +26,12 @@ namespace astra {
 
     static const char* ASTRA_DEFAULT_DEVICE_URI = "device/default";
 
+    /*!
+      \ingroup cpp_ref
+      \brief Stream Set Class
+
+      \details Stream Set \ref concepts_streamset.
+     */
     class StreamSet
     {
     public:

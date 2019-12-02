@@ -24,6 +24,12 @@
 
 namespace astra {
 
+    /*!
+      \ingroup cpp_ref
+      \brief A Masked Color Stream
+
+      \details A Masked Color Stream.
+     */
     class MaskedColorStream : public DataStream
     {
     public:
@@ -42,6 +48,12 @@ namespace astra {
         astra_maskedcolorstream_t maskedcolorStream_;
     };
 
+    /*!
+      \ingroup cpp_ref
+      \brief A Masked Color Frame of Masked Color Stream
+
+      \details A Masked Color Frame of Masked Color Stream
+     */
     class MaskedColorFrame : public ImageFrame<RgbaPixel, ASTRA_STREAM_MASKED_COLOR>
     {
     public:

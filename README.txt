@@ -1,4 +1,4 @@
-Astra SDK v2.0.17
+Astra SDK v2.0.18
 Copyright (c) 2015-2019 Orbbec
 https://www.orbbec3d.com
 
@@ -44,7 +44,7 @@ Possibly working systems - these may work but are untested/unsupported at this t
 
 Orbbec Body Tracking trial time expiration
 ===============
-For this release, Orbbec Body Tracking expires on 2019/11/30
+For this release, Orbbec Body Tracking expires on 2020/02/29
 and will stop operating. Please make sure to update to a new version before then.
 You can now set your license string to extend the trial. See API notes below for
 orbbec_body_tracking_set_license().
@@ -54,6 +54,9 @@ info@orbbec3d.com.
 
 What's New
 ==========
+
+v2.0.18 2019/11/07
+* hotfix for Astra Pro NH.
 
 v2.0.17 2019/07/31
 * Add support for the Orbbec Projector(Astra SL1200L(S_C/S_CF)) camera model.

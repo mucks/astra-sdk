@@ -24,6 +24,11 @@
 
 ASTRA_BEGIN_DECLS
 
+/**
+ * \defgroup infrared_ref infrared stream apis
+ * \ingroup c_ref
+ * @{
+ */
 ASTRA_API_EX astra_status_t astra_reader_get_infraredstream(astra_reader_t reader,
                                                             astra_infraredstream_t* infraredstream);
 
@@ -61,6 +66,7 @@ ASTRA_API_EX astra_status_t astra_infraredframe_get_metadata(astra_infraredframe
 
 ASTRA_API_EX astra_status_t astra_infraredframe_get_frameindex(astra_infraredframe_t infraredframe,
                                                                astra_frame_index_t* index);
+/** @} */
 
 ASTRA_END_DECLS
 

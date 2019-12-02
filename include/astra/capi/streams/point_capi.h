@@ -22,6 +22,11 @@
 
 ASTRA_BEGIN_DECLS
 
+/**
+ * \defgroup point_ref point stream apis
+ * \ingroup c_ref
+ * @{
+ */
 ASTRA_API_EX astra_status_t astra_reader_get_pointstream(astra_reader_t reader,
                                                                   astra_pointstream_t* pointStream);
 
@@ -50,6 +55,7 @@ ASTRA_API_EX astra_status_t astra_pointframe_get_metadata(astra_pointframe_t poi
 
 ASTRA_API_EX astra_status_t astra_pointframe_get_frameindex(astra_pointframe_t pointFrame,
                                                                      astra_frame_index_t* index);
+/** @} */
 ASTRA_END_DECLS
 
 #endif /* POINT_CAPI_H */

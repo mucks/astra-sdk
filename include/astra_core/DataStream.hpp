@@ -23,12 +23,23 @@
 
 namespace astra {
 
+    /*!
+      \ingroup cpp_ref
+      \brief Data Stream
+
+      \details Basic stream class of Data Stream.
+     */
     class DataStream
     {
     public:
         DataStream()
         {}
 
+        /*! 
+        \brief default constructs
+        
+        \param[in] connection
+        */
         DataStream(astra_streamconnection_t connection)
             : connection_(connection)
         {
@@ -38,6 +49,11 @@ namespace astra {
             }
         }
 
+        /*! 
+        \brief start stream       
+        
+        \return is stream available
+        */
         bool is_available() 
         {  
             bool isAvailable = false;
@@ -49,6 +65,9 @@ namespace astra {
             return isAvailable;
         }
 
+        /*! 
+        \brief start stream       
+        */
         void start()
         {
             if(connection_ == nullptr)
@@ -57,8 +76,11 @@ namespace astra {
             }
             astra_stream_start(connection_);
         }
+        
+        /*! 
+        \brief stop stream       
+        */
         void stop()
-
         {
             if(connection_ == nullptr)
             {

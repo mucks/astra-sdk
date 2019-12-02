@@ -28,6 +28,12 @@
 
 namespace astra {
 
+    /*!
+      \ingroup cpp_ref
+      \brief Stream Reader class
+
+      \details Stream Reader class \ref concepts_streamreader.
+     */
     class StreamReader
     {
     public:
@@ -70,6 +76,13 @@ namespace astra {
             return T(connection);
         }
 
+        
+        /*! 
+        \brief add listener
+        \details Registers a callback function to \ref concepts_streamreader.
+        
+        \param[in] listener
+        */
         void add_listener(FrameListener& listener)
         {
             if (!is_valid())
@@ -78,6 +91,12 @@ namespace astra {
             readerRef_.get()->add_listener(listener);
         }
 
+        /*! 
+        \brief remove listener
+        \details Unregisters the callback function.
+        
+        \param[in] listener
+        */
         void remove_listener(FrameListener& listener)
         {
             if (!is_valid())

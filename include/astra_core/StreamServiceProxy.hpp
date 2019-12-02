@@ -22,6 +22,12 @@
 
 namespace astra {
 
+    /*!
+      \ingroup cpp_ref
+      \brief Stream Service Proxy Class
+
+      \details Stream Service Proxy is use to proxy a connection
+     */
     class StreamServiceProxy : public astra_streamservice_proxy_t
     {
     public:

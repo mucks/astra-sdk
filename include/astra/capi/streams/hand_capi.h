@@ -24,6 +24,11 @@
 
 ASTRA_BEGIN_DECLS
 
+/**
+ * \defgroup hand_ref hand stream apis
+ * \ingroup c_ref
+ * @{
+ */
 ASTRA_API_EX astra_status_t astra_reader_get_handstream(astra_reader_t reader,
                                                                  astra_handstream_t* handStream);
 
@@ -79,7 +84,7 @@ ASTRA_API_EX astra_status_t astra_debug_handstream_set_pause_input(astra_debug_h
 ASTRA_API_EX astra_status_t astra_debug_handstream_set_lock_spawn_point(astra_debug_handstream_t debugHandStream,
                                                                                  bool lockSpawnPoint);
 
-
+/** @} */
 ASTRA_END_DECLS
 
 #endif // HAND_CAPI_H
