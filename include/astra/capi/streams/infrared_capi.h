@@ -26,7 +26,7 @@ ASTRA_BEGIN_DECLS
 
 /**
  * \defgroup infrared_ref infrared stream apis
- * \ingroup c_ref
+ * \ingroup c_low_api_ref
  * @{
  */
 ASTRA_API_EX astra_status_t astra_reader_get_infraredstream(astra_reader_t reader,

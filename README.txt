@@ -1,4 +1,4 @@
-Astra SDK v2.0.18
+Astra SDK v2.0.19
 Copyright (c) 2015-2019 Orbbec
 https://www.orbbec3d.com
 
@@ -23,11 +23,13 @@ Features
 
 Supported systems
 =================
-* Windows 8 and 10, 32-bit and 64-bit
-* Ubuntu 14.04 64-bit
-* Ubuntu 16.04 64-bit
+* Windows 7, 8 and 10, 32-bit and 64-bit
+* Ubuntu 14.04, 64-bit
+* Ubuntu 16.04, 64-bit, arm and aarch64
+* Ubuntu 18.04, 64-bit, arm and aarch64
 * Android 4.4.2 and 5.1 (armeabi-v7a 32-bit)
 * Orbbec Persee
+* raspbian for Raspberry Pi 4b
 
 Supported languages & frameworks
 ================================
@@ -37,6 +39,21 @@ Supported languages & frameworks
 * Java
 * Unity 5 - sample provided for Unity 5.3.6
 
+Supported Orbbec Camera Models
+==============================
+* Astra
+* Astra nh
+* Astra pro
+* Astra pro nh
+* Astra mini
+* Astra s
+* Astra pro plus
+* Astra Deeyea(Astra Embedded S)
+* Astra DaBai
+* Astra Stereo S
+* Gemini(Astra Stereo S (U3))
+* Projector(Astra SL1200L(S_C/S_CF))
+
 Possibly working systems - these may work but are untested/unsupported at this time
 ========================
 * Android 6.0, Android 7.0, Android 8.1
@@ -44,7 +61,7 @@ Possibly working systems - these may work but are untested/unsupported at this t
 
 Orbbec Body Tracking trial time expiration
 ===============
-For this release, Orbbec Body Tracking expires on 2020/02/29
+For this release, Orbbec Body Tracking expires on 2020/03/31
 and will stop operating. Please make sure to update to a new version before then.
 You can now set your license string to extend the trial. See API notes below for
 orbbec_body_tracking_set_license().
@@ -54,6 +71,12 @@ info@orbbec3d.com.
 
 What's New
 ==========
+
+v2.0.19 2019/12/26
+* add device controlling apis.
+* support Gemini(Astra Stereo S U3).
+* support arm/aarch64 linux.
+* samples can be built with VS2017 and VS2019.
 
 v2.0.18 2019/11/07
 * hotfix for Astra Pro NH.

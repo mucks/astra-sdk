@@ -28,7 +28,7 @@
 namespace astra {
 
     /*!
-     * \ingroup cpp_ref
+     * \ingroup cpp_core_api_ref
      * \brief Initializes the library.
      * \details This function must be called before calling any other function.
      */
@@ -38,7 +38,7 @@ namespace astra {
     }
 
     /*!
-     * \ingroup cpp_ref
+     * \ingroup cpp_core_api_ref
      * \brief Terminate the library, destroying all its streams. 
      * \details This function must be called when library not used, otherwise there will be problems when re-initialize it.And do not call any other function after calling this method.
      */

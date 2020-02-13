@@ -25,7 +25,7 @@ ASTRA_BEGIN_DECLS
 
 /**
  * \defgroup color_ref color stream apis
- * \ingroup c_ref
+ * \ingroup c_low_api_ref
  * @{
  */
 ASTRA_API_EX astra_status_t astra_reader_get_colorstream(astra_reader_t reader,

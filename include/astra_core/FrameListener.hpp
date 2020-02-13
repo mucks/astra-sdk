@@ -23,7 +23,7 @@ namespace astra {
     class Frame;
 
     /*! 
-     \ingroup cpp_ref
+     \ingroup cpp_core_api_ref
      \brief Frame Listener class
      \details inherits this class to receive data and regist it,then when astra update has data,we will call on_frame_ready
     */

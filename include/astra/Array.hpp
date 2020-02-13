@@ -19,7 +19,7 @@
 
 namespace astra {
     /*!
-      \ingroup cpp_ref
+      \ingroup cpp_basic_types_ref
       \brief Simple wrapper around primitive arrays
       \details Provides a strongly-typed wrapper around primitive C-style arrays.
       Array does not copy or consider itself the owner of the data provided
@@ -122,7 +122,7 @@ namespace astra {
     };
 
     /*!
-      \ingroup cpp_ref
+      \ingroup cpp_basic_types_ref
       \brief Simplifies \ref Array construction by leveraging
       function template type deduction
       \param [in] ptr Pointer to array

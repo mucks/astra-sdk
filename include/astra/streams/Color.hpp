@@ -25,7 +25,12 @@
 namespace astra {
 
     /*!
-      \ingroup cpp_ref
+      \defgroup cpp_color_api_ref color stream apis
+      \ingroup cpp_low_api_ref
+      @{
+     */
+
+    /*!
       \brief A color stream
 
       \details A color stream.
@@ -47,7 +52,6 @@ namespace astra {
     };
 
     /*!
-      \ingroup cpp_ref
       \brief color frame of rgb format
 
       \details color frame of rgb format
@@ -61,7 +65,6 @@ namespace astra {
     };
 
     /*!
-      \ingroup cpp_ref
       \brief color frame of raw format
 
       \details color frame of raw format
@@ -83,7 +86,7 @@ namespace astra {
         {}
     };
 #endif
-
+    /** @} */
 }
 
 #endif // ASTRA_COLOR_HPP

@@ -26,7 +26,12 @@ namespace astra {
     using DebugHandViewType = astra_debug_hand_view_type_t;
 
     /*!
-      \ingroup cpp_ref
+      \defgroup cpp_debughand_api_ref debug hand stream apis
+      \ingroup cpp_high_api_ref
+      @{
+     */
+
+    /*!
       \brief A Debug Hand Stream
 
       \details A Debug Hand Stream. for debug use
@@ -113,7 +118,6 @@ namespace astra {
     };
 
     /*!
-      \ingroup cpp_ref
       \brief A Debug Hand Frame
 
       \details A Debug Hand Frame
@@ -130,6 +134,7 @@ namespace astra {
             : ImageFrame(frame, ASTRA_PIXEL_FORMAT_RGB888)
         {}
     };
+    /** @} */
 }
 
 #endif /* ASTRA_HAND_DEBUG_HPP */

@@ -26,7 +26,7 @@ ASTRA_BEGIN_DECLS
 
 /**
  * \defgroup hand_ref hand stream apis
- * \ingroup c_ref
+ * \ingroup c_high_api_ref
  * @{
  */
 ASTRA_API_EX astra_status_t astra_reader_get_handstream(astra_reader_t reader,

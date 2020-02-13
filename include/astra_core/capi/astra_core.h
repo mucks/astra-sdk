@@ -10,7 +10,7 @@
 ASTRA_BEGIN_DECLS
 
 /*!
- * \defgroup astra_core_ref astra core apis
+ * \defgroup c_core_api_ref astra core apis
  * \ingroup c_ref
  * @{
  */
@@ -39,6 +39,10 @@ ASTRA_API astra_status_t astra_notify_plugin_event(astra_event_id id,
                                                    const void* data,
                                                    uint32_t dataSize);
 
+/*!
+ * @name streamset apis
+ * @{
+ */
 /*!
  * \brief Test whether the \ref concepts_streamset is valid.
  * 
@@ -75,7 +79,11 @@ ASTRA_API astra_status_t astra_streamset_close(astra_streamsetconnection_t* stre
 ASTRA_API astra_status_t astra_streamset_get_uri(astra_streamsetconnection_t connection,
                                                  char* uri,
                                                  int32_t size);
-
+/*! @} */
+/*!
+ * @name stream reader apis
+ * @{
+ */
 /*!
  * \brief Create a \ref concepts_streamreader in \ref concepts_streamset.
  * 
@@ -105,40 +113,6 @@ ASTRA_API astra_status_t astra_reader_get_stream(astra_reader_t reader,
                                                  astra_stream_type_t type,
                                                  astra_stream_subtype_t subtype,
                                                  astra_streamconnection_t* connection);
-
-/*!
- * \brief Get description of \ref concepts_stream.
- * 
- * \param[in] connection The handle to \ref concepts_stream.
- * \param[out] description The output location for description pointer.
- */
-ASTRA_API astra_status_t astra_stream_get_description(astra_streamconnection_t connection,
-                                                      astra_stream_desc_t* description);
-
-/*!
- * \brief Test whether the handle to \ref concepts_stream is valid.
- * 
- * \param[in] connection The handle to \ref concepts_stream.
- * \param[in] isAvailable The test result(true:valid false:invalid).
- */
-ASTRA_API astra_status_t astra_stream_is_available(astra_streamconnection_t connection,
-                                                   bool* isAvailable);
-
-/*!
- * \brief Start the \ref concepts_stream.
- * \details The \ref concepts_stream must be started before reading frame it.
- * 
- * \param[in] connection The handle to \ref concepts_stream.
- */
-ASTRA_API astra_status_t astra_stream_start(astra_streamconnection_t connection);
-
-/*!
- * \brief Stop the \ref concepts_stream. 
- * \details After stoping the \ref concepts_stream, can't read frame from it anymore.
- * 
- * \param[in] connection The handle to \ref concepts_stream.
- */
-ASTRA_API astra_status_t astra_stream_stop(astra_streamconnection_t connection);
 
 /*!
  * \brief Test whether there is a new frame.
@@ -200,6 +174,46 @@ ASTRA_API astra_status_t astra_reader_get_frame(astra_reader_frame_t frame,
                                                 astra_stream_subtype_t subtype,
                                                 astra_frame_t** subFrame);
 
+/*! @} */
+
+/*!
+ * @name stream apis
+ * @{
+ */
+/*!
+ * \brief Get description of \ref concepts_stream.
+ *
+ * \param[in] connection The handle to \ref concepts_stream.
+ * \param[out] description The output location for description pointer.
+ */
+ASTRA_API astra_status_t astra_stream_get_description(astra_streamconnection_t connection,
+                                                      astra_stream_desc_t* description);
+
+/*!
+* \brief Test whether the handle to \ref concepts_stream is valid.
+*
+* \param[in] connection The handle to \ref concepts_stream.
+* \param[in] isAvailable The test result(true:valid false:invalid).
+*/
+ASTRA_API astra_status_t astra_stream_is_available(astra_streamconnection_t connection,
+                                                   bool* isAvailable);
+
+/*!
+* \brief Start the \ref concepts_stream.
+* \details The \ref concepts_stream must be started before reading frame it.
+*
+* \param[in] connection The handle to \ref concepts_stream.
+*/
+ASTRA_API astra_status_t astra_stream_start(astra_streamconnection_t connection);
+
+/*!
+* \brief Stop the \ref concepts_stream.
+* \details After stoping the \ref concepts_stream, can't read frame from it anymore.
+*
+* \param[in] connection The handle to \ref concepts_stream.
+*/
+ASTRA_API astra_status_t astra_stream_stop(astra_streamconnection_t connection);
+
 /*!
  * \brief Set parameter to \ref concepts_streamset.
  * 
@@ -238,13 +252,15 @@ ASTRA_API astra_status_t astra_stream_invoke(astra_streamconnection_t connection
                                              uint32_t* resultByteLength,
                                              astra_result_token_t* token);
 
+/*! @} */
+
 /*!
  * \brief Drive the library to get a new frame of stream.
+ * \details call this function in while loop until there is a new frame,
+ *          using sleep to block cpu for several ms in while loop is recommended.
  */
 ASTRA_API astra_status_t astra_update();
-
-ASTRA_API astra_status_t astra_plugin_command(const char *plugin_name,const char *command,char *result,int lengh);
-/** @} */
+/*! @} */
 
 ASTRA_END_DECLS
 

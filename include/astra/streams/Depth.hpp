@@ -26,7 +26,12 @@
 namespace astra {
 
     /*!
-      \ingroup cpp_ref
+      \defgroup cpp_depth_api_ref depth stream apis
+      \ingroup cpp_low_api_ref
+      @{
+     */
+
+    /*!
       \brief CoordinateMapper
 
       \details Can convert coordinate system of point.
@@ -134,7 +139,6 @@ namespace astra {
     };
 
     /*!
-      \ingroup cpp_ref
       \brief A Depth Stream
 
       \details Depth Stream is a stream form depth sensor device.
@@ -257,7 +261,6 @@ namespace astra {
 
     
     /*!
-      \ingroup cpp_ref
       \brief A Depth Frame
 
       \details Depth Frame of short format, 1 mm per value;
@@ -270,6 +273,7 @@ namespace astra {
         {}
 
     };
+    /** @} */
 }
 
 #endif /* ASTRA_DEPTH_HPP */

@@ -28,7 +28,12 @@
 namespace astra {
 
     /*! 
-        \ingroup cpp_ref
+        \defgroup cpp_image_api_ref image stream apis
+        \ingroup cpp_low_api_ref
+        @{
+     */
+
+    /*!
         \brief rgb pixel struct
     */
     struct RgbPixel : public astra_rgb_pixel_t
@@ -56,7 +61,6 @@ namespace astra {
     };
     
     /*! 
-        \ingroup cpp_ref
         \brief rgba pixel struct
     */
     struct RgbaPixel : public astra_rgba_pixel_t
@@ -89,7 +93,6 @@ namespace astra {
     typedef RgbaPixel RGBAPixel;
 
     /*! 
-        \ingroup cpp_ref
         \brief Image Stream Mode               
     */
     class ImageStreamMode : private ::astra_imagestream_mode_t
@@ -262,7 +265,6 @@ namespace astra {
     }
 
     /*! 
-        \ingroup cpp_ref
         \brief basic Image Stream
     */
     class ImageStream : public DataStream
@@ -388,7 +390,6 @@ namespace astra {
 
     
     /*! 
-        \ingroup cpp_ref
         \brief Basic Image Frame
     */
     template<typename TDataType, astra_stream_type_t TStreamType>
@@ -551,6 +552,7 @@ namespace astra {
         TDataType* dataPtr_;
         std::uint32_t byteLength_;
     };
+    /** @} */
 }
 
 #endif // ASTRA_IMAGE_HPP

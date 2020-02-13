@@ -23,7 +23,7 @@
 namespace astra {
 
     /*!
-      \ingroup cpp_ref
+      \ingroup cpp_core_api_ref
       \brief Stream Service Proxy Class
 
       \details Stream Service Proxy is use to proxy a connection

@@ -23,7 +23,7 @@
 namespace astra {
 
     /*!
-      \ingroup cpp_ref
+      \ingroup cpp_core_api_ref
       \brief Stream Description class
 
       \details some info about stream

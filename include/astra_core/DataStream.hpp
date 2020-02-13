@@ -24,7 +24,7 @@
 namespace astra {
 
     /*!
-      \ingroup cpp_ref
+      \ingroup cpp_core_api_ref
       \brief Data Stream
 
       \details Basic stream class of Data Stream.

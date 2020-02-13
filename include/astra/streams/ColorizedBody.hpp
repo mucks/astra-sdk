@@ -25,7 +25,12 @@
 namespace astra {
 
     /*!
-      \ingroup cpp_ref
+      \defgroup cpp_colorbody_api_ref colorized body stream apis
+      \ingroup cpp_high_api_ref
+      @{
+     */
+
+    /*!
       \brief A Colorized Body Stream
 
       \details A Colorized Body Stream
@@ -49,7 +54,6 @@ namespace astra {
     };
 
     /*!
-      \ingroup cpp_ref
       \brief A Colorized Body Frame
 
       \details A Colorized Body Frame
@@ -61,6 +65,7 @@ namespace astra {
             : ImageFrame(frame, ASTRA_PIXEL_FORMAT_RGBA)
         {}
     };
+    /** @} */
 }
 
 #endif // ASTRA_COLORIZEDBODY_HPP

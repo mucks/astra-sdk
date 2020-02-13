@@ -36,7 +36,12 @@ namespace astra {
     using std::uint64_t;
 
     /*!
-      \ingroup cpp_ref
+      \defgroup cpp_body_api_ref body stream apis
+      \ingroup cpp_high_api_ref
+      @{
+     */
+
+    /*!
       \brief Bitmap representing a 2d mask
 
       Encapsulates a 2-dimensional bitmask. A non-zero pixel value is considered part
@@ -82,20 +87,17 @@ namespace astra {
     };
 
     /*! 
-    \ingroup cpp_ref
-    \brief Mask representing pixels that have been
+      \brief Mask representing pixels that have been
       identified as belonging to tracked bodies 
     */
     using BodyMask = BitmapMask;
     /*! 
-    \ingroup cpp_ref
-    \brief Mask representing pixels that have been
+      \brief Mask representing pixels that have been
       identified as belonging to the floor plane 
     */
     using FloorMask = BitmapMask;
 
     /*!
-      \ingroup cpp_ref
       \brief Bitmask of body features
         Represents the possible features that body tracking can produce
         on a body. This is a bitmask so multiple features can be combined.
@@ -111,7 +113,6 @@ namespace astra {
     };
 
     /*!
-      \ingroup cpp_ref
       \brief Skeleton profile representing the set of joints to be tracked.
     */
     enum class SkeletonProfile : ::astra_skeleton_profile_t {
@@ -124,7 +125,6 @@ namespace astra {
     };
 
     /*!
-      \ingroup cpp_ref
       \brief Represents the body tracking configuration that trades-off
       tracking accuracy, memory, and CPU usage.
     */
@@ -147,7 +147,6 @@ namespace astra {
     };
 
     /*!
-      \ingroup cpp_ref
       \brief the orientation of people's heads in depth image.
     */
     enum class BodyOrientation : ::astra_body_orientation_t {
@@ -157,7 +156,6 @@ namespace astra {
     };
 
     /*!
-      \ingroup cpp_ref
       \brief Joint status enumeration
     */
     enum class JointStatus : ::astra_joint_status_t
@@ -174,7 +172,6 @@ namespace astra {
     };
 
     /*!
-      \ingroup cpp_ref
       \brief Joint type enumeration
     */
     enum class JointType : ::astra_joint_type_t
@@ -202,7 +199,6 @@ namespace astra {
     };
 
     /*!
-      \ingroup cpp_ref
       \brief %Body joint
 
       Encapsulates information about a particular joint.
@@ -254,7 +250,6 @@ namespace astra {
     };
 
     /*!
-      \ingroup cpp_ref
       \brief Hand pose enum.
       Enumeration of the hand poses that can be detected.
     */
@@ -279,7 +274,6 @@ namespace astra {
     };
 
     /*!
-      \ingroup cpp_ref
       \brief Enumeration of possible tracking status of a \ref orbbec::bodytracking::Body
     */
     enum class BodyStatus : ::astra_body_status_t
@@ -295,19 +289,16 @@ namespace astra {
     };
 
     /*!
-      \ingroup cpp_ref
       \brief Type alias for an immutable Array of \link Joint Joints\endlink
      */
     using JointList = Array<const Joint>;
 
     /*! 
-     \ingroup cpp_ref
      \brief Identifier type for bodies
      */
     using BodyId = astra_body_id_t;
 
     /*!
-      \ingroup cpp_ref
       \brief Human body
 
       Provides info about a human body tracked by the BodyTracker.
@@ -367,7 +358,6 @@ namespace astra {
     };
 
     /*!
-      \ingroup cpp_ref
       \brief 3D geometric plane
 
       Represents a 3D plane.
@@ -454,14 +444,12 @@ namespace astra {
     };
 
     /*!
-      \ingroup cpp_ref
       \brief Type alias for an immutable Array of 
       \link Body Bodies\endlink
      */
     using BodyList = Array<const Body>;
 
     /*!
-      \ingroup cpp_ref
       \brief %Body tracking information produced by a BodyTracker instance
     */
     class BodyFrame
@@ -592,7 +580,6 @@ namespace astra {
 
     
     /*!
-      \ingroup cpp_ref
       \brief A Body Data Stream
 
       \details A Body Data Stream.
@@ -731,6 +718,7 @@ namespace astra {
     private:
          astra_bodystream_t bodyStream_{nullptr};
     };
+    /** @} */
 }
 
 #endif /* ASTRA_BODY_HPP */

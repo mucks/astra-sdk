@@ -25,7 +25,12 @@
 namespace astra {
 
     /*!
-      \ingroup cpp_ref
+      \defgroup cpp_point_api_ref point stream apis
+      \ingroup cpp_high_api_ref
+      @{
+     */
+
+    /*!
       \brief A Point Data Stream
 
       \details A Point Data Stream.
@@ -54,7 +59,6 @@ namespace astra {
     };
 
     /*!
-      \ingroup cpp_ref
       \brief A Point Data Frame
 
       \details A Point Data Frame
@@ -71,6 +75,7 @@ namespace astra {
             : ImageFrame(frame, ASTRA_PIXEL_FORMAT_POINT)
         {}
     };
+    /** @} */
 }
 
 #endif // ASTRA_POINT_HPP

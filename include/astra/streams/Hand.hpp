@@ -27,7 +27,12 @@
 namespace astra {
 
     /*!
-      \ingroup cpp_ref
+      \defgroup cpp_hand_api_ref hand stream apis
+      \ingroup cpp_high_api_ref
+      @{
+     */
+
+    /*!
       \brief Hand Point struct
 
       \details Hand Point struct
@@ -140,7 +145,6 @@ namespace astra {
     };
 
     /*!
-      \ingroup cpp_ref
       \brief A Hand Stream
 
       \details A Hand Stream
@@ -186,7 +190,6 @@ namespace astra {
     };
 
     /*!
-      \ingroup cpp_ref
       \brief A Hand Data Frame
 
       \details A Hand Data Frame
@@ -317,6 +320,7 @@ namespace astra {
         astra_handframe_t handFrame_{nullptr};
         astra_frame_index_t frameIndex_;
     };
+    /** @} */
 }
 
 #endif /* ASTRA_HAND_HPP */

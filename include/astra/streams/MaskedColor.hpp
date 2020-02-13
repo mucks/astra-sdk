@@ -25,7 +25,12 @@
 namespace astra {
 
     /*!
-      \ingroup cpp_ref
+      \defgroup cpp_maskedcolor_api_ref masked color stream apis
+      \ingroup cpp_high_api_ref
+      @{
+     */
+
+    /*!
       \brief A Masked Color Stream
 
       \details A Masked Color Stream.
@@ -49,7 +54,6 @@ namespace astra {
     };
 
     /*!
-      \ingroup cpp_ref
       \brief A Masked Color Frame of Masked Color Stream
 
       \details A Masked Color Frame of Masked Color Stream
@@ -61,6 +65,7 @@ namespace astra {
             : ImageFrame(frame, ASTRA_PIXEL_FORMAT_RGBA)
         {}
     };
+    /** @} */
 }
 
 #endif // ASTRA_MASKEDCOLOR_HPP
